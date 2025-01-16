@@ -24,7 +24,10 @@ const Dashboard = () => {
         dispatch(fetchInventory({ make: selectedMake, duration: selectedDuration }));  // Dispatch with default filters on load
     }, [dispatch, selectedMake, selectedDuration]);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div style={{padding:"2rem", fontStyle:"italic"}}>
+        Loading...
+        <p>Backend is being preparing, please refresh the page in 1-2 min again.</p>
+    </div>;
     if (error) return <div>Error: {error}</div>;
 
     // Toggle Sidebar visibility
@@ -46,9 +49,9 @@ const Dashboard = () => {
             <Navbar />
             <div style={{ backgroundColor: "#F5F5F5", padding: "1rem" }}>
                 <Inventory data={data} />
-                <InventoryCountChart data={data}/>
-                <AverageMSRPChart data={data}/>
-                <HistoryLog data={data}/>
+                <InventoryCountChart data={data} />
+                <AverageMSRPChart data={data} />
+                <HistoryLog data={data} />
 
                 <Button
                     variant="contained"
@@ -60,7 +63,7 @@ const Dashboard = () => {
                         color: '#000',
                         height: '2.5rem',
                         boxShadow: 'none', // Remove the box shadow from the filter button
-                        position: 'absolute', 
+                        position: 'absolute',
                         top: '70px', // Adjust the top position if needed
                         right: '20px', // Align to the right
                         marginTop: '10px'
