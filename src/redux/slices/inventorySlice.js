@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchInventory = createAsyncThunk('inventory/fetch', async ({ make, duration }) => {
-  const response = await axios.get('http://localhost:5000/api/inventory', {
+  const response = await axios.get('https://car-inventory-backend-g140.onrender.com/api/inventory', {
     params: {
       make: make || '',
       duration: duration || 'last_month',
