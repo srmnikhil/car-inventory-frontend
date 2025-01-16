@@ -6,8 +6,6 @@ const HistoryLog = ({ data }) => {
   const [historyLogs, setHistoryLogs] = useState([]);
 
   useEffect(() => {
-    let cumulativeNewUnits = 0, cumulativeNewTotalPrice = 0, cumulativeUsedUnits = 0, cumulativeUsedTotalPrice = 0, cumulativeCpoUnits = 0, cumulativeCpoTotalPrice = 0;
-
     // Get the date for 10 days ago
     const tenDaysAgo = new Date();
     tenDaysAgo.setDate(tenDaysAgo.getDate() - 10);

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Card, Typography, Button, MenuItem, Select, Divider, FormControl, RadioGroup, FormControlLabel, Radio, IconButton } from '@mui/material';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import CloseIcon from '@mui/icons-material/Close';
+import { Grid, Card, Typography, MenuItem, Select, Divider, FormControl} from '@mui/material';
 
 // Helper function to count entries based on condition
 const countEntriesByCondition = (data, condition) => {
